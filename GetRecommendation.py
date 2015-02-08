@@ -1,7 +1,7 @@
 '''
 Created on Nov 13, 2013
 
-@author: hai
+@author: Sriram
 '''
 
 import Pearson_Similarity
@@ -10,7 +10,7 @@ import Ranking
 
 
 
-
+#function used to invert the rating and the userid table
 def transformPrefs(prefs):
     result={}
     
@@ -24,8 +24,9 @@ def transformPrefs(prefs):
     return result
 
 
-# Gets recommendations for a person by using a weighted average
+# Gets recommendations for each user by using a weighted average
 # of every other user's rankings
+#user based colloborative filtering
 def getRecommendations(prefs,person,similarity= Pearson_Similarity.sim_pearson):
     totals={}
     simSums={}
