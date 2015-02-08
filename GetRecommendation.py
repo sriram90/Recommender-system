@@ -9,7 +9,6 @@ import recommendation
 import Ranking
 
 
-
 #function used to invert the rating and the userid table
 def transformPrefs(prefs):
     result={}
